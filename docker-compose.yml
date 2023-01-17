@@ -8,6 +8,8 @@ services:
       - .env
     environment:
       - PGDATA=/var/lib/postgresql/data/pgdata
+    ports:
+      - 5432:5432
     deploy:
       placement:
         constraints:
@@ -36,7 +38,7 @@ services:
       #- ./backend/app:/app
       - storage:/app/storage
     ports:
-      - 8080:8080
+      - 8000:8000
     build:
       context: ./backend
       dockerfile: backend.dockerfile
