@@ -48,3 +48,7 @@ services:
 volumes:
   app-db-data:
   storage:
+
+networks:
+  postgres:
+    driver: bridge
